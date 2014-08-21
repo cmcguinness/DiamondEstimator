@@ -38,12 +38,27 @@ shinyUI(
     
     fluidRow(
       column(12,
+             hr(style="height: 5px; background-color: #000;")
+             )
+      ),
+    
+    fluidRow(
+      column(12,
+             h3("Instructions:")
+      )
+    ),
+    
+    fluidRow(
+      column(4,
+             htmlOutput("pix")
+      ),
+      column(8,
              wellPanel(
                p("This program will estimate the weight of a diamond by its measurements.  It assumes",
                  "that the stone is set in a piece of jewelry (e.g., a ring), and that you can only",
                  "measure the width and length of the stone but not its depth."),
                p("You should use fairly decent calipers to measure the dimensions, and all measurements",
-                 "are in millimeters.")
+                 "are in millimeters. The chart to the left demonstrates how to take the measurements.")
              )
       )
     )
